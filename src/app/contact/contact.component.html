@@ -1,0 +1,24 @@
+<div class="contact" id="contact">
+  <div class="content-inner">
+      <div class="content-header">
+          <h2>Contact</h2>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-md-6">
+              <div class="contact-info">
+                  <p><i class="fa fa-user"></i>{{contentData.first_name}} {{contentData.last_name}}</p>
+                  <p><i class="fa fa-tag"></i>{{contentData.profession}}</p>
+                  <p><i class="fa fa-envelope"></i><a href="mailto:info@example.com">{{contentData.contacts.email}}</a></p>
+                  <p><i class="fa fa-phone"></i><a href="tel:+1234567890">{{contentData.contacts.phone}}</a></p>
+                  <p><i class="fa fa-map-marker"></i>{{contentData.contacts.address}}</p>
+                  <div class="social">
+                     <app-social-media-btn [socialMediaContent] = "contentData.social" [btnClass]="'btn'" ></app-social-media-btn>                
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+            <app-send-form></app-send-form>
+          </div>
+      </div>
+  </div>
+</div>

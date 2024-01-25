@@ -1,0 +1,138 @@
+{
+    "personal":
+    {
+      "first_name":"Antony",
+      "last_name":"Miller",
+      "profession":"Web Designer & Developer",
+      "image":"assets/data",
+      "resume":"assets/data",
+      "contacts":
+      {
+        "email":"info@example.com",
+        "phone":"+123-456-7890",
+        "address":"123 Street, Los Angeles, CA, USA"
+      },
+     
+      "social":
+      [
+        {"name":"facebook","link":"https://www.fb.com", "icon":"fa-facebook-f"},
+        {"name":"twitter","link":"https://www.twitter.com", "icon":"fa-twitter"},
+        {"name":"linkedin","link":"https://www.linkedin.com", "icon":"fa-linkedin-in"},
+        {"name":"instagram","link":"https://www.instagram.com", "icon":"fa-instagram"},
+        {"name":"youtube","link":"https://www.youtube.com", "icon":"fa-youtube"}
+      ]
+    },
+
+    "header":
+    {
+        "jobs":["Web Developer", "Front end developer","Apps Developer","Graphic Designer", "Web Designer"]
+    },
+
+    "about":
+    {
+        "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat. Proin libero ligula, gravida at porttitor eget.",
+        "skills":
+        [
+          {"skillName":"Design","strength":85}, 
+          {"skillName":"SEO","strength":95},
+          {"skillName":"Development","strength":90},
+          {"skillName":"Marketing","strength":90}
+        ]     
+    },
+    "education":
+    {
+        "schools":
+        [
+          {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "degree":"Master Degree",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."}, 
+
+          {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "degree":"Bachelor Degree",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."},
+
+          {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "degree":"Associate Degree",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."},
+
+          {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "degree":"High School",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."}
+        ]     
+    },
+
+    "experience":
+    {
+        "jobHistory":
+        [
+         {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "company":"Codex Solution","location":"San Francisco, CA","position":"Project Manager",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."}, 
+
+            {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "company":"Soft Solution Ltd","location":"San Francisco, CA","position":"Web Developer",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."}, 
+
+            {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "company":"ABC Soft Ltd","location":"San Francisco, CA","position":"Web Designer",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."}, 
+
+            {"startDate":"2020-01-01T00:00:00.001Z","endDate":"2025-01-01T00:00:00.001Z",
+            "company":"Soft Agency","location":"San Francisco, CA","position":"Graphic Designer",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."} 
+
+        ]     
+    },
+    "service":
+    {
+         "services":[
+            {"icon":"fa-desktop","domain":"Web Design",
+             "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."   
+            },
+            {"icon":"fa-laptop","domain":"Web Development",
+             "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."   
+            },
+            {"icon":"fa-search","domain":"SEO",
+             "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."   
+            },
+            {"icon":"fa-envelope-open-text","domain":"Digital Marketing",
+            "text":"Lorem ipsum dolor sit amet elit suscipit orci. Donec molestie velit id libero."   
+            }                         
+        ]
+        
+    },
+    "portfolio":
+    {
+        "gallery":
+        [
+          {"image":"assets/img/portfolio-1.jpg","link":"assets/img/portfolio-1.jpg", "projectName":"Project Name1","domain":"Web Design"} ,
+          {"image":"assets/img/portfolio-2.jpg","link":"assets/img/portfolio-2.jpg", "projectName":"Project Name2","domain":"Web Design"} ,      
+          {"image":"assets/img/portfolio-3.jpg","link":"assets/img/portfolio-3.jpg", "projectName":"Project Name3","domain":"Web Development"} ,
+          {"image":"assets/img/portfolio-4.jpg","link":"assets/img/portfolio-4.jpg", "projectName":"Project Name4","domain":"Web Development"} ,      
+          {"image":"assets/img/portfolio-5.jpg","link":"assets/img/portfolio-5.jpg", "projectName":"Project Name5","domain":"Digital Marketing"} ,
+          {"image":"assets/img/portfolio-4.jpg","link":"assets/img/portfolio-4.jpg", "projectName":"Project Name4","domain":"Web Development"} ,      
+          {"image":"assets/img/portfolio-5.jpg","link":"assets/img/portfolio-5.jpg", "projectName":"Project Name5","domain":"Digital Marketing"} ,
+          {"image":"assets/img/portfolio-6.jpg","link":"assets/img/portfolio-6.jpg", "projectName":"Project Name6","domain":"Digital Marketing"}    
+        ]
+              
+    },
+    "review":
+    {
+        "endorsments":
+        [
+            {"clientName":"Client Name1","profession":"Profession1","image":"assets/img/review-1.jpg",
+            "text":"Para 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat."
+            },
+            {"clientName":"Client Name2","profession":"Profession2","image":"assets/img/review-2.jpg",
+            "text":"Para 2  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat."
+            },
+            {"clientName":"Client Name3","profession":"Profession3","image":"assets/img/review-3.jpg",
+            "text":"Para 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu suscipit orci. Donec molestie velit id libero blandit, quis suscipit urna suscipit. Donec aliquet erat eu lacinia iaculis. Ut tempor tellus eu sem pharetra feugiat."
+            }
+            
+
+        ]
+    }
+    
+
+}

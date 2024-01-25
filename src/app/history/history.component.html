@@ -1,0 +1,13 @@
+<div class="row align-items-center">
+  <div class="col-md-6" *ngFor="let contentValue of contentArray" >
+      <div [ngClass]="{'exp-col':isJobHistory, 'edu-col':!isJobHistory}" >
+          <span>{{contentValue.startDate | date: 'dd-MMM-yyyy'}} <i>to</i> {{contentValue.endDate | date: 'dd-MMM-yyyy'}}</span>
+          <h3>{{contentValue.company}}</h3>
+          <ng-template [ngIf]="isJobHistory">
+            <h4>{{contentValue.location}}</h4>
+            <h5>{{contentValue.position}}</h5>
+          </ng-template>
+          <p>{{contentValue.text}}</p>
+      </div>
+  </div>
+</div>

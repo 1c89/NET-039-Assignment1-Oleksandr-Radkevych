@@ -1,0 +1,19 @@
+<div class="portfolio" id="portfolio">
+  <div class="content-inner">
+      <div class="content-header">
+          <h2>{{layoutData.title}}</h2>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+              <ul id="portfolio-flters">
+                   <li  *ngFor="let filter_item of getDomains()" (click) = "onFilterClick(filter_item)" [ngClass]="{'filter-active': filter_selected === filter_item}">{{filter_item}}</li>
+              </ul>
+          </div>
+      </div>
+      <div class="row portfolio-container">
+            <div class="col-lg-4 col-md-6 portfolio-item"  *ngFor="let item of getFilteredGallery()" >
+                <app-galleryphoto [photoDescription]="item"></app-galleryphoto>  
+            </div>
+      </div>
+  </div>
+</div>

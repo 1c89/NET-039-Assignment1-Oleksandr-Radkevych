@@ -1,0 +1,26 @@
+<div class="review" id="review">
+    <div class="content-inner" style="background:url(../assets/img/quote.png) right bottom no-repeat;">
+        <div class="content-header" >
+            <h2>{{layoutData.title}}</h2>
+        </div>
+
+        <div class="row align-items-center review-slider">
+            <div class="col-md-12">
+                <div class="review-slider-item" > 
+                    <div class="review-text" (click)="nextPage()">
+                        <p>
+                            {{currentContent().text}}
+                        </p>
+                    </div>
+                    <div class="review-img">
+                        <img [src]="currentContent().image" alt="Image">
+                        <div class="review-name">
+                            <h3>{{currentContent().clientName}}</h3>
+                            <p>{{currentContent().profession}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-6" *ngFor="let rowSkills of orderedSkills">
+      <div class="skills" *ngFor="let skill of rowSkills">
+        <div class="skill-name">
+          <p>{{skill.skillName}}</p><p>{{skill.strength}}%</p>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+  </div>
+</div>

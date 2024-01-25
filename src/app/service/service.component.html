@@ -1,0 +1,16 @@
+<div class="service" id="service">
+  <div class="content-inner">
+      <div class="content-header">
+          <h2>{{layoutData.title}}</h2>
+      </div>
+      <div class="row align-items-center">
+          <div class="col-md-6" *ngFor="let serv of contentData.services">
+              <div class="srv-col">
+                  <i class="fa" [class] = "serv.icon"></i>
+                  <h3>{{serv.domain}}</h3>
+                  <p>{{serv.text}}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

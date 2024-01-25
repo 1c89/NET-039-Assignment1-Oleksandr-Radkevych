@@ -1,6 +1,3 @@
-/**********************************/
-/********** General CSS ***********/
-/**********************************/
 body {
     color: #666666;
     background: #F6D155;
@@ -314,7 +311,7 @@ a:focus {
 
 .header .content-inner {
     padding: 100px 30px;
-    background: right bottom no-repeat;
+    background: url(../img/profile.png) right bottom no-repeat;
     background-size: contain;
 }
 
@@ -853,7 +850,7 @@ a:focus {
 .review .content-inner {
     position: relative;
     padding: 60px 30px;
-    /*background: url(img/quote.png) right bottom no-repeat;*/
+    background: url(../img/quote.png) right bottom no-repeat;
 }
 
 .review .review-text p {

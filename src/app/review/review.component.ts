@@ -21,11 +21,14 @@ export class ReviewComponent implements OnInit {
     return this.contentData.endorsments[this.currentPage];
   }
 
-  nextPage(){
-    if (this.currentPage == (this.contentData.endorsments.length-1))
+  nextPage(direction:number){
+    
+    if (this.currentPage == (this.contentData.endorsments.length-1) && direction > 0) 
       this.currentPage = 0;
+    else if (this.currentPage == 0 && direction < 0) 
+      this.currentPage = this.contentData.endorsments.length-1;
     else 
-      this.currentPage++
+      this.currentPage+=direction;
    }
  
    ngOnInit() {

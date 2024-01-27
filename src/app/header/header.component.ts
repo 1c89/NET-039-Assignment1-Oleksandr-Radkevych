@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   
   personalData:any={};
   contentData:any={};
+  layoutData:any={};
   
   constructor(private layoutDataService:LayoutDataService, private contentDataService:ContentDataService) { 
   
@@ -20,6 +21,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.contentData = this.contentDataService.getSectionContent("header");
     this.personalData = this.contentDataService.getSectionContent("personal");
+    this.layoutData = this.layoutDataService.getSectionParameters("header");
   }
 
 }

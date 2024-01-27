@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.contentData = this.contentDataService.getSectionContent("personal");
-    this.layoutData = this.layoutDataService.getSectionParameters("contact");
+    this.layoutData = this.layoutDataService.getSectionParameters("contacts");
   }
 
 

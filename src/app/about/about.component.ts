@@ -10,12 +10,14 @@ import { ContentDataService } from '../contentdata.service';
 export class AboutComponent implements OnInit {
 
   contentData:any={}
+  layoutData:any={}
   constructor(private layoutDataService:LayoutDataService, private contentDataService:ContentDataService) { 
     
   }
 
   ngOnInit() {
     this.contentData = this.contentDataService.getSectionContent("about");
+    this.layoutData  = this.layoutDataService.getSectionParameters("about");
     
   }
 

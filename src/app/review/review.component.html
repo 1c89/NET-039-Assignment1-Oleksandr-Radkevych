@@ -7,7 +7,7 @@
         <div class="row align-items-center review-slider">
             <div class="col-md-12">
                 <div class="review-slider-item" > 
-                    <div class="review-text" (click)="nextPage()">
+                    <div class="review-text">
                         <p>
                             {{currentContent().text}}
                         </p>
@@ -22,5 +22,7 @@
                 </div>
             </div>
         </div>
+        <button type="button" class = "slick-prev slick-arrow" aria-label="Previous" (click)="nextPage(-1)" style="float: left;">Prev</button>
+        <button type="button" class = "slick-next slick-arrow" aria-label="Next" (click)="nextPage(1)" style="float: right;">Next</button>
     </div>
 </div>

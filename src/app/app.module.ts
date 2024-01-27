@@ -19,6 +19,10 @@ import { HistoryComponent } from './history/history.component';
 import { GalleryphotoComponent } from './portfolio/galleryphoto/galleryphoto.component';
 import { SendFormComponent } from './contact/send-form/send-form.component';
 import { SocialMediaBtnComponent } from './social-media-btn/social-media-btn.component';
+import { FormsModule } from '@angular/forms';
+import { ScrollManager } from './scroll-manager.directive';
+import { ScrollSection } from './scroll-section.directive';
+import { ScrollAnchor } from './scroll-anchor.directive';
 
 
 @NgModule({
@@ -39,10 +43,15 @@ import { SocialMediaBtnComponent } from './social-media-btn/social-media-btn.com
       HistoryComponent,
       GalleryphotoComponent,
       SendFormComponent,
-      SocialMediaBtnComponent
+      SocialMediaBtnComponent,      
+      ScrollManager,
+      ScrollSection,
+      ScrollAnchor
+  
    ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

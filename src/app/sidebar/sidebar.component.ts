@@ -3,6 +3,7 @@ import { LayoutDataService } from '../layoutdata.service';
 import { ContentDataService } from '../contentdata.service';
 
 
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

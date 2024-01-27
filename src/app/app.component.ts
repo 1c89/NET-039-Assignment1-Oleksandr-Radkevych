@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NET-039-Assignment1-Oleksandr-Radkevych';
+  
 }

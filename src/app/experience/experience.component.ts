@@ -9,17 +9,18 @@ import { LayoutDataService } from '../layoutdata.service';
 })
 export class ExperienceComponent implements OnInit {
 
-  layoutData:any={};
-  contentData:any={};
-  
-  constructor(private layoutDataService:LayoutDataService, private contentDataService:ContentDataService) { 
+  layoutData: any = {};
+  contentData: any = {};
+
+  constructor(private layoutDataService: LayoutDataService, private contentDataService: ContentDataService) {
 
   }
 
   ngOnInit() {
-      this.layoutData = this.layoutDataService.getSectionParameters("experience");
-      this.contentData = this.contentDataService.getSectionContent("experience");
+    const sectionName: string = 'experience';
 
+    this.layoutData = this.layoutDataService.getSectionParameters(sectionName);
+    this.contentData = this.contentDataService.getSectionContent(sectionName);
   }
 
 }

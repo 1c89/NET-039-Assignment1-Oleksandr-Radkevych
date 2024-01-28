@@ -14,10 +14,10 @@ export class EducationComponent implements OnInit {
   constructor(private layoutDataService:LayoutDataService, private contentDataService:ContentDataService) { }
 
   ngOnInit() {
-    this.contentData = this.contentDataService.getSectionContent("education").schools.map((edu:{degree:string,value:any}) => {return {company: edu.degree, ...edu}});
-    this.layoutData = this.layoutDataService.getSectionParameters("education");
+    const sectionName: string = 'education';
 
-
+    this.contentData = this.contentDataService.getSectionContent(sectionName).schools.map((edu:{degree:string,value:any}) => {return {company: edu.degree, ...edu}});
+    this.layoutData = this.layoutDataService.getSectionParameters(sectionName);
   }
 
 }

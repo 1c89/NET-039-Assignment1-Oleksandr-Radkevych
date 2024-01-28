@@ -15,8 +15,10 @@ export class PortfolioComponent implements OnInit {
   constructor(private layoutDataService:LayoutDataService, private contentDataService:ContentDataService) { }
 
   ngOnInit() {
-    this.contentData = this.contentDataService.getSectionContent("portfolio");
-    this.layoutData = this.layoutDataService.getSectionParameters("portfolio");
+    const sectionName: string = 'portfolio';
+
+    this.contentData = this.contentDataService.getSectionContent(sectionName);
+    this.layoutData = this.layoutDataService.getSectionParameters(sectionName);
   }
 
   getDomains(){

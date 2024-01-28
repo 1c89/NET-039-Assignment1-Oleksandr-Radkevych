@@ -32,8 +32,10 @@ export class ReviewComponent implements OnInit {
    }
  
    ngOnInit() {
-      this.layoutData = this.layoutDataService.getSectionParameters("review");
-      this.contentData = this.contentDataService.getSectionContent("review");
+    const sectionName: string = 'review';
+
+    this.layoutData = this.layoutDataService.getSectionParameters(sectionName);
+    this.contentData = this.contentDataService.getSectionContent(sectionName);
   }
 
 }

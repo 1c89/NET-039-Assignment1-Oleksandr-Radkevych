@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable, map, catchError,throwError, BehaviorSubject, find, take, filter, switchMap, of, EMPTY, delay } from 'rxjs';
 import * as layoutData from '../assets/data/layoutdata.json'
 
-export interface Declaration {
+export interface INavBarItem {
+  isNav:boolean,
+  link:string,
+  icon:string
+}
+export interface ILayout {
   section: string;
   title: string;
-  navigation:{isNav:boolean,link:string,icon:string}
+  navigation: INavBarItem
   className:string;
 }
 
@@ -13,29 +20,38 @@ export interface Declaration {
 })
 
 export class LayoutDataService {
-  private layoutData:any[]=[];
-  
+  //private layoutData = new Array<ILayout>();
+  private layoutJSONPath = '../assets/data/layoutdata.json';
+  private layoutData:ILayout[] = Array<ILayout>(); //new Array<ILayout>();
   constructor() 
   { 
     //this.websiteStructure = structData;
-    this.layoutData = Array.from(layoutData);
+    this.layoutData = Array.from(layoutData) as ILayout[];
     console.log(typeof(this.layoutData));
   }
   
   
-  getSectionParameters(section: string): any {
-    return this.layoutData.find((item) => item.section === section);
+  getSectionParameters(section: string): ILayout {
+    
+    const emptyLayout = {} as ILayout;
+
+    const item = this.layoutData.find(item => item.section === section);
+    if (!item) {
+      console.error(`Item with section '${section}' not found.`);
+      return emptyLayout;
+    }
+    
+    return item;;
   }
 
-  getNavigationBarParameters() 
+  getNavigationBarParameters() :ILayout[]
   {
   
     return this.layoutData.filter((p)=>p.navigation.isNav);
 
   }
 
-  getAllParameters(): any[] {
+  getAllParameters(): ILayout[] {
     return this.layoutData;
   }
-
 }

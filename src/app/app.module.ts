@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,10 +21,12 @@ import { HistoryComponent } from './history/history.component';
 import { GalleryphotoComponent } from './portfolio/galleryphoto/galleryphoto.component';
 import { SendFormComponent } from './contact/send-form/send-form.component';
 import { SocialMediaBtnComponent } from './social-media-btn/social-media-btn.component';
-import { FormsModule } from '@angular/forms';
 import { ScrollManager } from './scroll-manager.directive';
 import { ScrollSection } from './scroll-section.directive';
 import { ScrollAnchor } from './scroll-anchor.directive';
+import { FormValidationComponent } from './form-validation/form-validation.component';
+
+
 
 
 @NgModule({
@@ -46,13 +50,15 @@ import { ScrollAnchor } from './scroll-anchor.directive';
       SocialMediaBtnComponent,      
       ScrollManager,
       ScrollSection,
-      ScrollAnchor
+      ScrollAnchor,
+      FormValidationComponent
   
    ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

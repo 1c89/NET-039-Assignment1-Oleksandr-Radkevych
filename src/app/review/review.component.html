@@ -1,12 +1,12 @@
 <div class="review" id="review">
     <div class="content-inner" style="background:url(../assets/img/quote.png) right bottom no-repeat;">
-        <div class="content-header" >
+        <div class="content-header">
             <h2>{{layoutData.title}}</h2>
         </div>
 
-        <div class="row align-items-center review-slider">
+        <div class="row align-items-center review-slider slick-slider">
             <div class="col-md-12">
-                <div class="review-slider-item" > 
+                <div class="review-slider-item">
                     <div class="review-text">
                         <p>
                             {{currentContent().text}}
@@ -21,8 +21,9 @@
                     </div>
                 </div>
             </div>
+
+            <button type="button" class="slick-prev slick-arrow" aria-label="Previous" (click)="nextPage(-1)">Prev</button>
+            <button type="button" class="slick-next slick-arrow" aria-label="Next" (click)="nextPage(1)">Next</button>
         </div>
-        <button type="button" class = "slick-prev slick-arrow" aria-label="Previous" (click)="nextPage(-1)" style="float: left;">Prev</button>
-        <button type="button" class = "slick-next slick-arrow" aria-label="Next" (click)="nextPage(1)" style="float: right;">Next</button>
     </div>
 </div>

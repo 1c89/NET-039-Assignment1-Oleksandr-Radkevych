@@ -2,22 +2,32 @@
   <form #formSendMessage="ngForm" (ngSubmit)="onSubmit(formSendMessage)">
       <div class="form-row">
           <div class="form-group col-md-6">
-              <input type="text" ngModel required name = "senderName" class="form-control" placeholder="Your Name" />
-          </div>    
+              <input type="text" ngModel required name = "senderName" #senderName ="ngModel" class="form-control" placeholder="Your Name" [ngClass]="validateControl(senderName)"/>
+              <app-form-validation [feedbackMessage]="validationMessage(senderName,['Correct','Please provide a name'],'validationsenderNameFeedback')" ></app-form-validation>
+           </div>    
           <div class="form-group col-md-6">
-              <input type="email" ngModel required email name="senderEmail" #email="ngModel" class="form-control" placeholder="Your Email" />
-              
-              <div id="validationServer03Feedback" *ngIf="!email.valid && email.touched" class="invalid-feedback">
-                Please provide a valid email.
-              </div>
+              <input type="email" ngModel required email name="senderEmail" #email="ngModel" class="form-control" placeholder="Your Email" [ngClass]="validateControl(email)" />
+              <app-form-validation [feedbackMessage]="validationMessage(email,['Correct','Please provide a valid email'],'validationemailFeedback')" ></app-form-validation>
           </div>
       </div>
       <div class="form-group">
-          <input type="text" ngModel required name="messageSubject" class="form-control" placeholder="Subject" />
+          <input type="text" ngModel #subject="ngModel" required name="messageSubject" class="form-control" placeholder="Subject" [ngClass]="validateControl(subject)" />
+          <app-form-validation [feedbackMessage]="validationMessage(subject,['','Please write a subject'],'validationsubjectFeedback')" ></app-form-validation>
+ 
       </div>
       <div class="form-group">
-          <textarea class="form-control" ngModel required name="messageBody" rows="5" placeholder="Message"></textarea>
-      </div>
-      <div><button class="btn" type="submit" click="onSubmit()">Send Message</button></div>
+          <textarea 
+            class="form-control" 
+            ngModel 
+            #messageBody="ngModel" 
+            required 
+            name="messageBody" 
+            rows="5" 
+            placeholder="Message" 
+            [ngClass]="validateControl(messageBody)">
+          </textarea>
+          <app-form-validation [feedbackMessage]="validationMessage(messageBody,['','Please write me something'],'validationmessageBodyFeedback')" ></app-form-validation>
+     </div>
+      <div><button class="btn" type="submit" click="onSubmit()" [disabled]="!formSendMessage.valid">Send Message</button></div>
   </form>
 </div>
